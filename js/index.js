@@ -16,6 +16,7 @@ function sumar() {
     if (p == 3) {
       x = 1;
       document.getElementById('containerex').style.display = "block";
+      document.getElementById('containerf').style.display = "block";
       document.getElementById('gameball').style.opacity = "0%";
       document.getElementById('puntos').style.opacity = "0%";
       document.getElementById('ss').style.opacity = "0%";
@@ -29,7 +30,6 @@ function sumar() {
 function showex() {
   document.getElementById('show').style.opacity = "100%";
   document.getElementById('show').classList.add("scaler");
-  document.getElementById('containerf').style.display = "block";
 }
 
 
@@ -40,8 +40,10 @@ window.onscroll = () => {
   }
   if (window.scrollY > 600) {
     borrador.style.marginTop = "-209px";
+    if(mediaqueryList.matches) {
     document.getElementById('cl').style.opacity="7%";
     document.getElementById('cl2').style.opacity="7%";
+    }
   }
   if (window.scrollY < 200) {
     borrador.style.marginTop = "-265px";
@@ -68,6 +70,8 @@ window.onscroll = () => {
   }
   if (window.scrollY > 1800) {
     borrador.style.marginTop = "-80px";
+    document.getElementById('cl').style.opacity="0%";
+    document.getElementById('cl2').style.opacity="0%";
   }
   if (window.scrollY > 2000) {
     borrador.style.marginTop = "-60px";
@@ -82,15 +86,12 @@ window.onscroll = () => {
     scroller.style.opacity="0%";
     borrador.style.backgroundColor = '#0e0e0e';
     document.body.style.backgroundColor = '#0e0e0e';
-    document.getElementById('cl').style.opacity="0%";
-    document.getElementById('cl2').style.opacity="0%";
   }
   else {
     document.body.style.backgroundColor = '#121212';
     borrador.style.backgroundColor = '#121212';
     scroller.style.opacity="100%";
   }
-
   if (window.scrollY < 6100) {
     document.getElementById('show').style.opacity = "0%";
   }

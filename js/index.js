@@ -93,6 +93,7 @@ window.onscroll = () => {
     scroller.style.opacity="0%";
     borrador.style.backgroundColor = '#0e0e0e';
     document.body.style.backgroundColor = '#0e0e0e';
+    document.getElementById('nave').style.opacity="0%";
   }
   else {
     document.body.style.backgroundColor = '#121212';

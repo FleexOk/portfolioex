@@ -312,6 +312,37 @@ body {
   left: 0;
   transition: 0.7s ease-in;
 }
+.stoptrying {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0e0e0e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  display: none;
+}
+.stoptrying h2 {
+  color: #f9f9f9;
+  font-size: 80%;
+  font-family: Montserrat;
+  font-weight: bold;
+  margin-top: 30vh;
+}
+.stoptrying h3 {
+  color: #df0d50;
+  font-family: Montserrat;
+  font-size: 60%;
+}
+.stoptrying img {
+  width: 30%;
+  margin-top: 30px;
+}
 /* media queries */
 @media only screen and (max-width: 768px) {
   .col2 {
@@ -384,5 +415,10 @@ body {
     width: 75px;
     height: 75px;
     border-radius: 33px;
+  }
+}
+@media only screen and (max-width: 268px) {
+  .stoptrying {
+    display: block;
   }
 }

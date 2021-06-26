@@ -37,12 +37,13 @@ function showex() {
 window.onscroll = () => {
   if (window.scrollY > 200) {
     borrador.style.marginTop = "-245px";
+  } else{
+    document.getElementById('mar').style.opacity="0%";
   }
   if (window.scrollY > 600) {
     borrador.style.marginTop = "-209px";
     if(mediaqueryList.matches) {
-    document.getElementById('cl').style.opacity="7%";
-    document.getElementById('cl2').style.opacity="7%";
+    document.getElementById('mar').style.opacity="4%";
     }
   }
   if (window.scrollY < 200) {
@@ -70,8 +71,14 @@ window.onscroll = () => {
   }
   if (window.scrollY > 1800) {
     borrador.style.marginTop = "-80px";
+    document.getElementById('cl').style.opacity="7%";
+    document.getElementById('cl2').style.opacity="7%";
+    document.getElementById('moon').style.opacity="4%";
+    document.getElementById('mar').style.opacity="0%";
+  } else {
     document.getElementById('cl').style.opacity="0%";
     document.getElementById('cl2').style.opacity="0%";
+    document.getElementById('moon').style.opacity="0%";
   }
   if (window.scrollY > 2000) {
     borrador.style.marginTop = "-60px";

@@ -11,24 +11,25 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Montserrat:ital,wght@0,400;0,700;0,800;1,700&display=swap"
     rel="stylesheet">
-  <title>Hello, world!</title>
+  <title>SSx portfolio</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 </head>
 
 <body>
   <!-- NAVBAR -->
   <div class="navbar">
     <div class="col">
-      <a class="main-l justify-space destroy-dec ml-color a-main-anim" href="#">.ssx();</a>
+      <a class="main-l justify-space destroy-dec ml-color a-main-anim" href="index.html">.ssx();</a>
     </div>
     <div class="col2">
-      <a class="main-l justify-space destroy-dec l-color a-main-anim" href="#">.contact();</a>
-      <a class="main-l justify-space destroy-dec l-color a-main-anim" href="#">.curriculum();</a>
-      <a class="main-l justify-space destroy-dec l-color a-main-anim" href="#">.about();</a>
+      <a class="main-l justify-space destroy-dec l-color a-main-anim" href="contact.html">.contact();</a>
+      <a class="main-l justify-space destroy-dec l-color a-main-anim" href="cv.pdf" download>.curriculum();</a>
+      <a class="main-l justify-space destroy-dec l-color a-main-anim" href="about.html">.about();</a>
     </div>
   </div>
   <!-- END NAVBAR -->
   <!-- NAVE -->
-    <img class="nave" src="images/nave.svg">
+    <img class="nave" src="images/book.svg">
   <!-- SCROLLER -->
   <div class="scroller"></div>
   <div class="flyer">
@@ -47,7 +48,7 @@
       }(jQuery);</pre>
     <div class="borrador"></div>
   </div>
-  <div class="labele" id="show"></div>
+  
   <!-- CONTAINER COLOR -->
 
   <div class="containerm">
@@ -67,9 +68,6 @@
       <h3 class="l-color t-slogan">About me.</h3>
       <p class="lp-color lp-size">I´m Juan Melnechuk and i´m from Argentina. I have 17 years old and i´m
         frontend/backend junior developer.</p>
-    </div>
-    <div class="img"> <!--TO FIX-->
-      <img id="set" src="images/x1.png">
     </div>
   </div>
   <div class="container">
@@ -191,6 +189,7 @@
       <h3 class="l-color" id="shows">Good! > Keep downing...</h3>
     </div>
   </div>
+
   <div class="container" id="containerex" style="display: none;">
     <div class="infobox">
       <h1 class="ml-color mt-size">Skills</h1>
@@ -205,8 +204,8 @@
       </ul>
       <h2>Especialized</h2>
       <ul>
-        <li>Frontend</li>
-        <li>Backend</li>
+        <li>Frontend 75%</li>
+        <li>Backend 25%</li>
       </ul>
       <h2>IDEs</h2>
       <ul>
@@ -236,7 +235,7 @@
   <div class="container" id="containerf" style="display: none;">
     <div class="mainbox">
       <h2 class="l-color mt-size">.Ssx(<span class="ml-color">thanks</span>);</h2>
-      <h3 class="l-color t-slogan">For your time.</h3>
+      <h3 class="l-color t-slogan">Thanks for your time.</h3>
       <p class="lp-color lp-size">If can we work together, you can check my <span class="ml-color">contact media</span>
         in the link below...</p>
       <a href="">CONTACT ME</a>
@@ -250,7 +249,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>	
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/MotionPathPlugin.min.js"></script>
   <script>
-    const titles = gsap.utils.toArray('.mainboxh2')
+    const mediaqueryList = window.matchMedia("(min-width: 768px)");
+    const titles = gsap.utils.toArray('.mainboxh2');
     titles.forEach((text, i) => {
     gsap.to(text, {
       scrollTrigger: {
@@ -301,13 +301,13 @@
 
   const spath = [
     {x:-100, y:1},
-    {x:-250, y:-40},
-    {x:-400, y:-73},
-    {x:-500, y:-87},
-    {x:-300, y:-112},
-    {x:-200, y:-127},
-    {x:-100, y:-140},
-    {x:100, y:-160},
+    {x:-150, y:0},
+    {x:-200, y:0},
+    {x:-350, y:0},
+    {x:-400, y:0},
+    {x:-350, y:0},
+    {x:-300, y:0},
+    {x:300, y:0},
   ];
 
   const tl = gsap.timeline({
@@ -322,7 +322,7 @@
       path: spath,
       alignOrigin: [0.5, 0.5]
     },
-    duration: 10,
+    duration: 6,
     immediateRender: true,
     ease: "sine.inOut"
   })

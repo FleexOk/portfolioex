@@ -12,6 +12,13 @@ body {
 .navbar {
   padding: 5px;
 }
+.col2 {
+  margin-right: 20px;
+}
+.col2 a {
+  transition: 0.2s;
+}
+/*  GENERIC CLASSES  */
 .main-l {
   font-size: 20px;
   font-family: Roboto Mono;
@@ -28,14 +35,20 @@ body {
 .l-color {
   color: #f9f9f9;
 }
+.mt-size {
+  font-size: 60px;
+}
+.t-slogan {
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: bold;
+}
+.lp-color {
+  color: #d9d9d9;
+}
+/* fin generic classes */
 .a-main-anim:hover {
   color: #df0d50;
-}
-.col2 {
-  margin-right: 20px;
-}
-.col2 a {
-  transition: 0.2s;
 }
 .containerm {
   display: flex;
@@ -49,22 +62,11 @@ body {
   margin-top: 80px;
   overflow: hidden;
 }
-
+/* FIRST BOX */
 .mainbox {
   margin-top: 20%;
   margin-bottom: 25%;
   width: 300px;
-}
-.mt-size {
-  font-size: 60px;
-}
-.t-slogan {
-  font-size: 20px;
-  font-family: Montserrat;
-  font-weight: bold;
-}
-.lp-color {
-  color: #d9d9d9;
 }
 .mainbox p {
   margin-left: 20px;
@@ -81,6 +83,22 @@ body {
   font-size: 100%;
   margin-left: -400px;
 }
+/* end first box */
+.mainbox-2 h2 {
+  transform: scale(0);
+}
+.mainbox-2 {
+  margin-left: 15%;
+  margin-top: 20%;
+}
+.mainbox-2 h4 {
+  font-size: 70px;
+  margin-left: -1500px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+/* end second box */
+/* BARRA DE SCROLL, NUBES Y CODE WRITING*/
 .scroller {
   width: 1px;
   height: 310px;
@@ -105,25 +123,40 @@ body {
   position: absolute;
   margin-top: -265px;
   transition: 0.2s;
+  z-index: 1;
 }
-.active {
-  background-color: #f9f9f9;
-  width: 100px;
-  height: 100px;
-}
-.mainbox-2 h2 {
-  transform: scale(0);
-}
-.mainbox-2 {
-  margin-left: 15%;
-  margin-top: 20%;
-}
-.mainbox-2 h4 {
-  font-size: 70px;
-  margin-left: -1500px;
-  width: 100%;
+.clouds {
+  box-sizing: border-box;
+  top: 10px;
+  left: 10px;
+  position: fixed;
+  display: flex;
   flex-wrap: wrap;
+  z-index: -50;
 }
+.clouds img {
+  width: 500px;
+  opacity: 0%;
+  transition: 0.5s ease-in;
+}
+.c1 {
+  margin-left: -100px;
+  margin-top: -150px;
+}
+.c2 {
+  margin-left: 900px;
+  margin-top: -70px;
+}
+.nave {
+  position: fixed;
+  width: 200px;
+  opacity: 60%;
+  right: -300px;
+  bottom: 10px;
+  z-index: -1;
+}
+/* end barra scroll, nubes y code */
+/*  MINIGAME  */
 .info {
   margin-top: 100px;
 }
@@ -140,6 +173,7 @@ body {
   width: 100%;
   height: 400px;
   margin-top: 50px;
+  margin-bottom: 100px;
 }
 
 .game h2 {
@@ -166,7 +200,7 @@ body {
   text-align: center;
   margin-top: -100px;
 }
-
+/* skills boxes */
 .infobox {
   margin-left: 30%;
 }
@@ -185,21 +219,8 @@ body {
   list-style: none;
   color: #f9f9f9;
 }
-.labele {
-  box-sizing: border-box;
-  position: fixed;
-  background-color: #df0d50;
-  width: 1px;
-  height: 500px;
-  left: 30%;
-  transition: 0.6s ease-in-out;
-  opacity: 0%;
-  transform: scaleY(0);
-}
-.scaler {
-  transform: scaleY(1);
-}
 
+/* final contact form redirect*/
 #containerf .mainbox {
   margin-left: 30%;
 }
@@ -214,80 +235,17 @@ body {
   font-family: Montserrat;
   font-weight: bold;
 }
-.img {
-  overflow: hidden;
-}
-.img img {
-  width: 120px;
-  position: absolute;
-  margin-left: 10%;
-  margin-top: 20%;
-  transition: 0.7s ease-in-out;
-  transform: scale(0);
-}
-.clouds {
+.cbox {
   box-sizing: border-box;
-  top: 10px;
-  left: 10px;
-  position: fixed;
-  display: flex;
-  flex-wrap: wrap;
+  padding: 100px;
 }
-.clouds img {
-  width: 500px;
-  opacity: 0%;
-  transition: 1s ease-in;
+.btn-send {
+  background-color: #df0d50;
+  border-color: #df0d50;
+  font-family: Montserrat;
+  color: #f9f9f9;
 }
-.c1 {
-  margin-left: -100px;
-  margin-top: -150px;
-}
-.c2 {
-  margin-left: 900px;
-  margin-top: -70px;
-}
-.nave {
-  position: fixed;
-  width: 40px;
-  opacity: 60%;
-  right: -100px;
-  bottom: 10px;
-}
-@media only screen and (max-width: 768px) {
-  .col2 {
-    display: none;
-  }
-  .mainbox h1 {
-    font-size: 30px;
-    margin-left: 15%;
-  }
-  .mainbox h3 {
-    margin-left: 15%;
-  }
-  .mainbox p {
-    margin-left: 20%;
-    width: 60%;
-  }
-  .mainbox {
-    padding: 0px 35px;
-  }
-  .mainbox h2 {
-    padding: 0px 15%;
-  }
-  .mainbox-2 {
-    padding: 10%;
-  }
-  .mainbox-2 h2 {
-    font-size: 30px;
-  }
-  .mainbox-2 h4 {
-    width: 100%;
-    font-size: 50px;
-  }
-  .game {
-    border: 1px solid #df0d50;
-  }
-}
+
 .containerh {
   width: 500%;
   height: 900px;
@@ -310,6 +268,7 @@ body {
 .hbox {
   text-align: center;
   margin-top: 200px;
+  z-index: -2;
 }
 .hbox ul li {
   list-style: none;
@@ -319,4 +278,59 @@ body {
   font-family: Montserrat;
   font-weight: bold;
   font-size: 15px;
+}
+
+/* media queries */
+@media only screen and (max-width: 768px) {
+  .col2 {
+    display: none;
+  }
+  .mainbox h1 {
+    font-size: 30px;
+    margin-left: 15%;
+  }
+  .mainbox h3 {
+    margin-left: 15%;
+  }
+  .mainbox p {
+    margin-left: 20%;
+    width: 60%;
+  }
+  .mainbox {
+    padding: 0px 35px;
+  }
+  .mainbox h2 {
+    transform: scale(1);
+    font-size: 100%;
+    margin-left: -400px;
+  }
+  .mainbox-2 {
+    padding: 10%;
+  }
+  .mainbox-2 h2 {
+    font-size: 30px;
+    transform: scale(1);
+  }
+  .mainbox-2 h4 {
+    width: 100%;
+    font-size: 50px;
+  }
+  .scroller {
+    width: 1px;
+    height: 310px;
+    position: fixed;
+    background: #df0d50;
+    top: 38%;
+    left: 3%;
+    transition: 1s;
+  }
+  #containerf .mainbox {
+    margin-left: 10%;
+  }
+  #containerex {
+    margin-left: -10%;
+  }
+  .containerm {
+    margin-top: 200px;
+  }
 }

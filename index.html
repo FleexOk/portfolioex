@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Montserrat:ital,wght@0,400;0,700;0,800;1,700&display=swap"
@@ -26,10 +26,19 @@
       <a class="main-l justify-space destroy-dec l-color a-main-anim" href="cv.pdf" download>.curriculum();</a>
       <a class="main-l justify-space destroy-dec l-color a-main-anim" href="about.html">.about();</a>
     </div>
+    <li class="nav-item dropdown">
+      <button class="dropdown btn-menu dropdown-toggle" onclick="showMenu()" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      </button>
+      <div class="dropdown-menu" id="phonemenu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="cv.pdf" download>Curriculum</a>
+        <a class="dropdown-item" href="about.html">About Me</a>
+        <a class="dropdown-item" href="contact.html">Contact Me</a>
+      </div>
+    </li>
   </div>
   <!-- END NAVBAR -->
   <!-- NAVE -->
-    <img class="nave" src="images/book.svg">
+    <img class="nave" src="images/pay.svg">
   <!-- SCROLLER -->
   <div class="scroller"></div>
   <div class="flyer">
@@ -58,10 +67,10 @@
       <p class="lp-color lp-size">Creative frontend dev.</p>
     </div>
   </div>
-  <div class="clouds">
     <img class="c2" id="cl" src="images/cloud1.png">
     <img class="c1" id="cl2" src="images/cloud2.png">
-  </div>
+    <div class="moon" id="moon"></div>
+    <img class="mar" id="mar" src="images/a.gif">
   <div class="container">
     <div class="mainbox">
       <h2 class="l-color mt-size mainboxh2">.Ssx(<span class="ml-color">about</span>);</h2>
@@ -245,6 +254,7 @@
   </div>
   <script src="js/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>	
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/MotionPathPlugin.min.js"></script>
@@ -290,7 +300,23 @@
     })
   });
 
-  gsap.to(".clouds",{
+  gsap.to(".c1",{
+    duration: 8.5,
+    repeat:-1,
+    x:100,
+    y:26,
+    yoyo:true,
+    ease: "sine.inOut"
+  });
+  gsap.to(".c2",{
+    duration: 8.5,
+    repeat:-1,
+    x:100,
+    y:26,
+    yoyo:true,
+    ease: "sine.inOut"
+  });
+  gsap.to(".moon",{
     duration: 8.5,
     repeat:-1,
     x:100,
@@ -300,15 +326,15 @@
   });
 
   const spath = [
-    {x:-100, y:1},
-    {x:-150, y:0},
-    {x:-200, y:0},
-    {x:-350, y:0},
-    {x:-400, y:0},
-    {x:-350, y:0},
-    {x:-300, y:0},
-    {x:300, y:0},
+    {x:-200, y:1},
+    {x:-450, y:0},
+    {x:-450, y:0},
+    {x:-450, y:5},
+    {x:-450, y:10},
+    {x:-450, y:5},
+    {x:-450, y:0}
   ];
+
 
   const tl = gsap.timeline({
 	scrollTrigger: {
@@ -322,7 +348,7 @@
       path: spath,
       alignOrigin: [0.5, 0.5]
     },
-    duration: 6,
+    duration: 15,
     immediateRender: true,
     ease: "sine.inOut"
   })
@@ -343,7 +369,18 @@
     }
   });
   </script>
-
+  <script>
+  var x = 0;
+  function showMenu() {
+    if(x == 0){
+    document.getElementById("phonemenu").classList.toggle("show");
+    x++;
+    } else  {
+      document.getElementById("phonemenu").classList.remove("show");
+      x = 0;
+    }
+  } 
+  </script>
 </body>
 
 </html>

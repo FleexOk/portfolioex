@@ -1,485 +1,406 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  scroll-behavior: smooth;
-}
-body {
-  background-color: #121212;
-  transition: 0.3s;
-  scroll-snap-type: y mandatory;
-  overflow-x: hidden;
-  transition: 0.2s;
-}
-.navbar {
-  padding: 5px;
-}
-.col2 {
-  margin-right: 20px;
-}
-.col2 a {
-  transition: 0.2s;
-}
-/*  GENERIC CLASSES  */
-.main-l {
-  font-size: 20px;
-  font-family: Roboto Mono;
-}
-.ml-color {
-  color: #df0d50;
-}
-.justify-space {
-  margin: 0px 10px;
-}
-.destroy-dec {
-  text-decoration: none;
-}
-.l-color {
-  color: #f9f9f9;
-}
-.mt-size {
-  font-size: 60px;
-}
-.t-slogan {
-  font-size: 20px;
-  font-family: Montserrat;
-  font-weight: bold;
-}
-.lp-color {
-  color: #d9d9d9;
-}
-/* fin generic classes */
-.a-main-anim:hover {
-  color: #df0d50;
-}
-.containerm {
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-.container {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin-top: 80px;
-  overflow: hidden;
-}
-/* FIRST BOX */
-.mainbox {
-  margin-top: 20%;
-  margin-bottom: 25%;
-  width: 300px;
-}
-.mainbox p {
-  margin-left: 20px;
-  width: 330px;
-  margin-top: 20px;
-  margin-left: 30px;
-}
-.mainbox h4 {
-  width: 900px;
-  font-size: 60px;
-}
-.mainbox h2 {
-  transform: scale(0);
-  font-size: 100%;
-  margin-left: -400px;
-}
-/* end first box */
-.mainbox-2 h2 {
-  transform: scale(0);
-}
-.mainbox-2 {
-  margin-left: 15%;
-  margin-top: 20%;
-}
-.mainbox-2 h4 {
-  font-size: 70px;
-  margin-left: -1500px;
-  width: 100%;
-  flex-wrap: wrap;
-}
-/* end second box */
-/* BARRA DE SCROLL, NUBES Y CODE WRITING*/
-.scroller {
-  width: 1px;
-  height: 310px;
-  position: fixed;
-  background: #df0d50;
-  top: 38%;
-  left: 10%;
-  overflow: hidden;
-  transition: 1s;
-}
-.flyer {
-  position: fixed;
-  top: 40%;
-  left: 7.5%;
-  color: #303030;
-  z-index: -99;
-}
-.borrador {
-  width: 500px;
-  height: 250px;
-  background-color: #121212;
-  position: absolute;
-  margin-top: -265px;
-  transition: 0.2s;
-  z-index: 1;
-}
-.c1 {
-  position: fixed;
-  left: -100px;
-  top: 10px;
-  opacity: 0%;
-  width: 500px;
-  z-index: -50;
-  transition: 0.5s ease-in;
-}
-.c2 {
-  position: fixed;
-  right: -100px;
-  top: -50px;
-  opacity: 0%;
-  width: 500px;
-  z-index: -49;
-  transition: 0.5s ease-in;
-}
-.moon {
-  box-sizing: border-box;
-  width: 150px;
-  height: 150px;
-  opacity: 0%;
-  background-color: #f9f9f9;
-  border-radius: 75px;
-  box-shadow: 0px 0px 35px #f9f9f9;
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transition: 1s ease-in;
-}
-.nave {
-  position: fixed;
-  width: 100px;
-  opacity: 60%;
-  right: -300px;
-  bottom: 100px;
-  z-index: -1;
-}
-/* end barra scroll, nubes y code */
-/*  MINIGAME  */
-.info {
-  margin-top: 100px;
-}
-.info h2 {
-  margin-top: 250px;
-  font-size: 50px;
-  margin: 0 5%;
-  text-align: center;
-  transition: 0.3s ease-in;
-}
+<!doctype html>
+<html lang="en">
 
-.game {
-  box-sizing: border-box;
-  width: 100%;
-  height: 400px;
-  margin-top: 50px;
-  margin-bottom: 100px;
-}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Montserrat:ital,wght@0,400;0,700;0,800;1,700&display=swap"
+    rel="stylesheet">
+  <title>SSx portfolio</title>
+  <link rel="shortcut icon" href="images/enchufe.svg">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
 
-.game h2 {
-  text-align: center;
-  color: #f9f9f9;
-  font-family: Montserrat;
-  font-weight: bold;
-  margin-top: 5px;
-}
-.ball {
-  box-sizing: border-box;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
-  background-color: #f9f9f9;
-  margin: 30px 30px;
-  cursor: pointer;
-  transition: 3s ease-out;
-  margin-top: 50px;
-}
-.info h3 {
-  opacity: 0%;
-  transition: 0.5s ease-in-out;
-  text-align: center;
-  margin-top: -100px;
-}
-/* skills boxes */
-.infobox {
-  margin-left: 30%;
-}
-.infobox h1 {
-  font-family: Montserrat;
-  font-weight: bold;
-}
-.infobox h2 {
-  font-family: Montserrat;
-  color: #f9f9f9;
-  text-transform: uppercase;
-}
+<body>
+  <div class="stoptrying">
+    <h2>Stop Trying AntiResponsive :(</h2>
+    <h3>MADE WITH MEDIA QUERIES</h3>
+    <img src="images/stop.svg">
+  </div>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="col">
+      <a class="main-l justify-space destroy-dec ml-color a-main-anim" href="index.html">.ssx();</a>
+    </div>
+    <div class="col2">
+      <a class="main-l justify-space destroy-dec l-color a-main-anim" href="contact.html">.contact();</a>
+      <a class="main-l justify-space destroy-dec l-color a-main-anim" href="cv.pdf" download>.curriculum();</a>
+      <a class="main-l justify-space destroy-dec l-color a-main-anim" style="cursor: pointer;" onClick="document.getElementById('mainabout').scrollIntoView();">.about();</a>
+    </div>
+    <img src="images/menu.svg" class="menudrop" onclick="dropmenu()">
+    <img src="images/close.svg" class="menuclose" id="close" onclick="closemenu()">
+    <div class="menu" id="menu">
+      <div class="menu-list">
+        <ul>
+          <li>
+            <a href="cv.pdf" download>CURRICULUM</a>
+          </li>
+          <li onclick="tocontact()">
+            CONTACT ME
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- END NAVBAR -->
+  <!-- NAVE -->
+    <img class="nave" id="nave" src="images/pay.svg">
+  <!-- SCROLLER -->
+  <div class="scroller"></div>
+  <div class="flyer">
+    <pre>
+      +function ($) {
+        'use strict';
+        var version = $.fn.jquery.split(' ')
+        [0].split('.')
+        if ((version[0] < 2
+        && version[1] < 9) ||
+        (version[0] == 1 && version[1] == 9
+        && version[2] < 1) ||
+        (version[0] > 3)) {
+          throw new Error('thanks for your time');
+        }
+      }(jQuery);</pre>
+    <div class="borrador"></div>
+  </div>
+  
+  <!-- CONTAINER COLOR -->
 
-.infobox ul li {
-  text-decoration: none;
-  list-style: none;
-  color: #f9f9f9;
-}
+  <div class="containerm">
+    <div class="mainbox">
+      <h1 class="l-color mt-size">.Ssx(<span class="ml-color">portfolio</span>);</h1>
+      <h3 class="l-color t-slogan">Welcome to my portfolio.</h3>
+      <p class="lp-color lp-size">Creative frontend dev.</p>
+    </div>
+  </div>
+    <img class="c2" id="cl" src="images/cloud1.png">
+    <img class="c1" id="cl2" src="images/cloud2.png">
+    <div class="moon" id="moon"></div>
+    <img class="mar" id="mar" src="images/a.gif">
+  <div class="container">
+    <div class="mainbox">
+      <h2 class="l-color mt-size mainboxh2">.Ssx(<span class="ml-color">about</span>);</h2>
+      <h3 class="l-color t-slogan">About me.</h3>
+      <p class="lp-color lp-size">I´m Juan Melnechuk and i´m from Argentina. I have 17 years old and i´m
+        frontend/backend junior developer.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="mainbox">
+      <h2 class="l-color mt-size mainboxh2">.Ssx(<span class="ml-color">Curriculum</span>);</h2>
+      <h3 class="l-color t-slogan">A life-work experience.</h3>
+    </div>
+  </div>
+  <div class="container">
+    <div class="mainbox">
+      <h2 class="l-color mt-size mainboxh2">.Ssx(<span class="ml-color">worktime</span>);</h2>
+      <h3 class="l-color t-slogan">2020-2021.</h3>
+      <p class="lp-color lp-size">Time working on.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="mainbox-2">
+      <h2 class="l-color mt-size">.Ssx(<span class="ml-color">skilledpages</span>);</h2>
+      <h3 class="l-color t-slogan">Skilled On eCommerce Interfaces.</h3>
+      <h4 class="l-color magia">I am very motivated to improve my skills in<span class="ml-color"> e-commerce web
+          pages.</span></h4>
+    </div>
+  </div>
+  <div class="container">
+    <div class="mainbox-2">
+      <h2 class="l-color mt-size">.Ssx(<span class="ml-color">personality</span>);</h2>
+      <h3 class="l-color t-slogan">A restless and creative boy.</h3>
+      <h4 class="l-color magia">I consider myself as a very creative person, capable of solving problems in a very<span
+          class="ml-color"> efficient way.</span></h4>
+    </div>
+  </div>
+  <div class="container">
+    <div class="mainbox-2">
+      <h2 class="l-color mt-size">.Ssx(<span class="ml-color">motivation</span>);</h2>
+      <h3 class="l-color t-slogan">Motivated by learning.</h3>
+      <h4 class="l-color magia">I am very interested in my learning and the work experiencie, i consider it to be <span
+          class="ml-color">the most important things</span> to be able to fully develop as a coder.</h4>
+    </div>
+  </div>
+  <div class="containerh" id="mainabout">
+    <section class="panel black">
+      <div class="hbox">
+        <h2 class="l-color mt-size">.Ssx(<span class="ml-color">interactive</span>);</h2>
+        <h3 class="l-color t-slogan">A funny content.</h3>
+      </div>
+    </section>
+    <section class="panel red">
+      <div class="hbox">
+        <h2 class="l-color mt-size">.Ssx(<span class="l-black">webtools</span>);</h2>
+        <h3 class="l-color t-slogan">Made with GSAP</h3>
+        <ul>
+          <li>
+            <h2 class="l-black">ScrollTrigger</h2>
+          </li>
+          <li>
+            <h2 class="l-black">MotionPath</h2>
+          </li>
+          <li>
+            <h2 class="l-black">Photoshop</h2>
+          </li>
+          <li>
+            <h2 class="l-black">Visual Studio</h2>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="panel black">
+      <div class="hbox">
+        <h2 class="l-color mt-size">.Ssx(<span class="ml-color">used</span>);</h2>
+        <ul>
+          <li>
+            <h2 class="l-color">+24hs of work</h2>
+          </li>
+          <li>
+            <h2 class="l-color">+3000W of energy</h2>
+          </li>
+          <li>
+            <h2 class="l-color">+6hs of thinking</h2>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="panel red">
+      <div class="hbox">
+        <h2 class="l-color mt-size">.Ssx(<span class="l-black">music</span>);</h2>
+        <ul>
+          <h3 class="l-color t-slogan">No sleep</h3>
+          <li>
+            <h2 class="l-black">NO ME CONOCEN</h2>
+          </li>
+          <li>
+            <h2 class="l-black">PINIFARINA - REMIX</h2>
+          </li>
+          <h3 class="l-color t-slogan">Sad hours</h3>
+          <li>
+            <h2 class="l-black">good 4 u</h2>
+          </li>
+          <li>
+            <h2 class="l-black">amorfoda</h2>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="panel black">
+      <div class="hbox">
+        <h2 class="l-color mt-size">.Ssx(<span class="ml-color">games</span>);</h2>
+        <h3 class="l-color t-slogan">A rocket league player.</h3>
+      </div>
+    </section>
+  </div>
+  <div class="container">
+    <div class="info">
+      <h2 class="l-color" id="ss">Touch the ball 3 times to <span style="color: #df0d50;;">unlock</span> the remainder
+      </h2>
+      <div class="game" id="bgame">
+        <h2 id="puntos">0</h2>
+        <div class="ball" id="gameball"></div>
+      </div>
+      <h3 class="l-color" id="shows">Good! > Keep downing...</h3>
+    </div>
+  </div>
+  <div class="container" id="containerex" style="display: none;">
+    <div class="infobox">
+      <h1 class="ml-color mt-size">Skills</h1>
+      <h2 class="hola">Languajes</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Js</li>
+        <li>C#</li>
+        <li>MySQL</li>
+        <li>Php</li>
+      </ul>
+      <h2>Especialized</h2>
+      <ul>
+        <li>Frontend 75%</li>
+        <li>Backend 25%</li>
+      </ul>
+      <h2>IDEs</h2>
+      <ul>
+        <li>Adobe Photoshop</li>
+        <li>Visual Studio</li>
+      </ul>
+      <h2>I like coding on</h2>
+      <ul>
+        <li>Moz://a developer</li>
+        <li>Windows</li>
+      </ul>
+      <h1 class="ml-color mt-size">Social media</h1>
+      <h2>INSTAGRAM</h2>
+      <ul>
+        <li>@juaan.xs</li>
+      </ul>
+      <h2>TWITTER</h2>
+      <ul>
+        <li>@juaan.xs</li>
+      </ul>
+      <h2>TIKTOK</h2>
+      <ul>
+        <li>@juaan.xs</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container" id="containerf" style="display: none;">
+    <div class="mainbox">
+      <h2 class="l-color mt-size">.Ssx(<span class="ml-color">thanks</span>);</h2>
+      <h3 class="l-color t-slogan">Thanks for your time.</h3>
+      <p class="lp-color lp-size">If we can work together, you can check my <span class="ml-color">contact media</span>
+        in the link below...</p>
+      <a href="">CONTACT ME</a>
+      <p class="lp-color lp-size">And remember, this page is in constant development, check the changes in a few days,
+        goodbye.</p>
+    </div>
+  </div>
+  <div class="navbar">
+    <div class="col">
+      <a class="main-l justify-space destroy-dec ml-color a-main-anim" href="index.html">.ssx();</a>
+    </div>
+    <div class="col2">
+      <a class="main-l justify-space destroy-dec l-color a-main-anim" href="contact.html">.contact();</a>
+      <a class="main-l justify-space destroy-dec l-color a-main-anim" href="cv.pdf" download>.curriculum();</a>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>	
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/MotionPathPlugin.min.js"></script>
+  <script>
+    const mediaqueryList = window.matchMedia("(min-width: 768px)");
+    const titles = gsap.utils.toArray('.mainboxh2');
+    titles.forEach((text, i) => {
+    gsap.to(text, {
+      scrollTrigger: {
+        trigger:text,
+        start: "center 80%",
+        end: "center 45%",
+        scrub:true,
+        toggleActions:"play reset play reverse"
+      },
+      x:400,
+      scale:1,
+      duration: 0.7
+    })
+  });
+  gsap.to(".scroller", {
+      scrollTrigger:  {
+      trigger: ".scroller",
+      start: "top 20%",
+      end:"6000px 80%",
+      scrub: true,
+      toggleActions:"play reverse none none"
+      },
+      scale: 0
+  });
 
-/* final contact form redirect*/
-#containerf .mainbox {
-  margin-left: 30%;
-}
+  const h4ex = gsap.utils.toArray('.magia')
+  h4ex.forEach((text, i) => {
+    gsap.to(text, {
+      scrollTrigger:{
+        trigger:text,
+        start: "top bottom",
+        end: "center 80%",
+        scrub: 1,
+        toggleActions:"play reverse none none"
+      },
+      x: 1450
+    })
+  });
 
-.container a {
-  text-decoration: none;
-  text-shadow: none;
-  background-color: #df0d50;
-  padding: 5px;
-  border-radius: 3px;
-  color: #f9f9f9;
-  font-family: Montserrat;
-  font-weight: bold;
-}
-.cbox {
-  box-sizing: border-box;
-  padding: 100px;
-}
-.btn-send {
-  background-color: #df0d50;
-  border-color: #df0d50;
-  font-family: Montserrat;
-  color: #f9f9f9;
-}
+  gsap.to(".c1",{
+    duration: 8.5,
+    repeat:-1,
+    x:100,
+    y:26,
+    yoyo:true,
+    ease: "sine.inOut"
+  });
+  gsap.to(".c2",{
+    duration: 8.5,
+    repeat:-1,
+    x:100,
+    y:26,
+    yoyo:true,
+    ease: "sine.inOut"
+  });
+  gsap.to(".moon",{
+    duration: 8.5,
+    repeat:-1,
+    x:100,
+    y:26,
+    yoyo:true,
+    ease: "sine.inOut"
+  });
 
-.containerh {
-  width: 500vw;
-  height: 900px;
-  display: flex;
-  flex-wrap: nowrap;
-}
-.red {
-  background-color: #df0d50;
-}
-.black {
-  background-color: #0e0e0e;
-}
-.l-black {
-  color: #0e0e0e;
-}
-.panel {
-  width: 100vw;
-  height: 100vh;
-}
-.hbox {
-  text-align: center;
-  margin-top: 200px;
-  z-index: -2;
-}
-.hbox ul li {
-  list-style: none;
-}
-.hbox ul li h2 {
-  margin: 10px;
-  font-family: Montserrat;
-  font-weight: bold;
-  font-size: 15px;
-}
-.menudrop {
-  display: none;
-  position: fixed;
-  top: 90vh;
-  right: 5vw;
-  width: 30px;
-  z-index: 99;
-  cursor: pointer;
-  transition: 0.6s;
-}
-.menudrop:hover {
-  transform: scale(1.2);
-}
-.menudrop:active {
-  transform: scale(1.2);
-}
-.btn-menu {
-  background-color: #df0d50;
-  text-shadow: none;
-  border: none;
-  padding: 5px;
-  border-radius: 5px;
-  margin: 5px;
-}
-.mar {
-  width: 100%;
-  opacity: 0%;
-  z-index: -90;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  transition: 0.7s ease-in;
-}
-.stoptrying {
-  box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
-  background-color: #0e0e0e;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 50;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-  display: none;
-}
-.stoptrying h2 {
-  color: #f9f9f9;
-  font-size: 80%;
-  font-family: Montserrat;
-  font-weight: bold;
-  margin-top: 30vh;
-}
-.stoptrying h3 {
-  color: #df0d50;
-  font-family: Montserrat;
-  font-size: 60%;
-}
-.stoptrying img {
-  width: 30%;
-  margin-top: 30px;
-}
-.menuclose {
-  width: 20px;
-  position: fixed;
-  top: 20px;
-  right: -20px;
-  z-index: 101;
-  cursor: pointer;
-  transition: 0.6s;
-}
-#menu {
-  transition: 0.6s;
-  margin-left: -100vw;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  background-color: #0e0e0e;
-  width: 100vw;
-  height: 100vh;
-  z-index: 100;
-  text-align: center;
-  display: none;
-}
-.menu a {
-  text-decoration: none;
-  text-shadow: none;
-  color: #f9f9f9;
-  transition: 0.6s;
-}
-.menu a:hover {
-  color: #df0d50;
-}
-.menu ul li {
-  text-decoration: none;
-  list-style: none;
-  color: #f9f9f9;
-  z-index: 101;
-  font-family: Montserrat;
-  font-weight: bold;
-  transition: 0.6s;
-  cursor: pointer;
-}
-.menu ul li:hover {
-  color: #df0d50;
-}
-.menu ul {
-  margin-top: 45vh;
-  margin-right: 10vw;
-}
-/* media queries */
-@media only screen and (max-width: 768px) {
-  #menu {
-    display: block;
-  }
-  .menudrop {
-    display: block;
-  }
-  .col2 {
-    display: none;
-  }
-  .mainbox h1 {
-    font-size: 30px;
-    margin-left: 15%;
-  }
-  .mainbox h3 {
-    margin-left: 15%;
-  }
-  .mainbox p {
-    margin-left: 20%;
-    width: 60%;
-  }
-  .mainbox {
-    padding: 0px 35px;
-  }
-  .mainbox h2 {
-    transform: scale(1);
-    font-size: 100%;
-    margin-left: -400px;
-  }
-  .mainbox-2 {
-    padding: 10%;
-  }
-  .mainbox-2 h2 {
-    font-size: 30px;
-    transform: scale(1);
-  }
-  .mainbox-2 h4 {
-    width: 100%;
-    font-size: 50px;
-  }
-  .scroller {
-    width: 1px;
-    height: 310px;
-    position: fixed;
-    background: #df0d50;
-    top: 38%;
-    left: 3%;
-    transition: 1s;
-  }
-  #containerf .mainbox {
-    margin-left: 10%;
-  }
-  #containerex {
-    margin-left: -10%;
-  }
-  .containerm {
-    margin-top: 200px;
-  }
-  .mt-size {
-    font-size: 40px;
-  }
-  .show {
-    display: block;
-  }
-  .c1 {
-    width: 200px;
-  }
-  .c2 {
-    width: 200px;
-  }
-  .moon {
-    width: 75px;
-    height: 75px;
-    border-radius: 33px;
-  }
-}
-@media only screen and (max-width: 268px) {
-  .stoptrying {
-    display: block;
-  }
-}
+  const spath = [
+    {x:-200, y:1},
+    {x:-450, y:0},
+    {x:-450, y:0},
+    {x:-450, y:5},
+    {x:-450, y:10},
+    {x:-450, y:5},
+    {x:-450, y:0}
+  ];
+
+
+  const tl = gsap.timeline({
+	scrollTrigger: {
+		scrub: 5.5,
+	},
+  })
+
+  
+  tl.to(".nave", {
+    motionPath: {
+      path: spath,
+      alignOrigin: [0.5, 0.5]
+    },
+    duration: 15,
+    immediateRender: true,
+    ease: "sine.inOut"
+  })
+
+
+
+  let sections = gsap.utils.toArray(".panel");
+
+  gsap.to(sections, {
+    xPercent: -100 * (sections.length - 1),
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".containerh",
+      pin: true,
+      scrub: 1,
+      snap: 1 / (sections.length - 1),
+      end: () => "+=" + document.querySelector(".containerh").offsetWidth
+    }
+  });
+  </script>
+  <script>
+    function dropmenu(){
+      document.getElementById('menu').style.marginLeft="0vw";
+      document.getElementById('close').style.marginRight="40px";
+    }
+    function closemenu(){
+      document.getElementById('menu').style.marginLeft="-100vw";
+      document.getElementById('close').style.marginRight="-20px";
+    }
+    function tocontact(){
+      window.open("contact.html");
+    }
+  </script>
+</body>
+
+</html>

@@ -289,8 +289,21 @@ body {
   font-weight: bold;
   font-size: 15px;
 }
-.dropdown {
+.menudrop {
   display: none;
+  position: fixed;
+  top: 90vh;
+  right: 5vw;
+  width: 30px;
+  z-index: 99;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.menudrop:hover {
+  transform: scale(1.2);
+}
+.menudrop:active {
+  transform: scale(1.2);
 }
 .btn-menu {
   background-color: #df0d50;
@@ -299,10 +312,6 @@ body {
   padding: 5px;
   border-radius: 5px;
   margin: 5px;
-}
-.dropdown-menu {
-  right: 5px;
-  padding: 10px;
 }
 .mar {
   width: 100%;
@@ -344,8 +353,62 @@ body {
   width: 30%;
   margin-top: 30px;
 }
+.menuclose {
+  width: 20px;
+  position: fixed;
+  top: 20px;
+  right: -20px;
+  z-index: 101;
+  cursor: pointer;
+  transition: 0.6s;
+}
+#menu {
+  transition: 0.6s;
+  margin-left: -100vw;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #0e0e0e;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  text-align: center;
+  display: none;
+}
+.menu a {
+  text-decoration: none;
+  text-shadow: none;
+  color: #f9f9f9;
+  transition: 0.6s;
+}
+.menu a:hover {
+  color: #df0d50;
+}
+.menu ul li {
+  text-decoration: none;
+  list-style: none;
+  color: #f9f9f9;
+  z-index: 101;
+  font-family: Montserrat;
+  font-weight: bold;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.menu ul li:hover {
+  color: #df0d50;
+}
+.menu ul {
+  margin-top: 45vh;
+  margin-right: 10vw;
+}
 /* media queries */
 @media only screen and (max-width: 768px) {
+  #menu {
+    display: block;
+  }
+  .menudrop {
+    display: block;
+  }
   .col2 {
     display: none;
   }
@@ -399,9 +462,6 @@ body {
   }
   .mt-size {
     font-size: 40px;
-  }
-  .dropdown {
-    display: block;
   }
   .show {
     display: block;

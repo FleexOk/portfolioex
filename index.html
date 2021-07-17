@@ -1,21 +1,28 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="notranslate" translate="no">
 
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Montserrat:ital,wght@0,400;0,700;0,800;1,700&display=swap"
     rel="stylesheet">
   <title>SSx portfolio</title>
+  <link rel="shortcut icon" href="images/enchufe.svg">
+  <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 </head>
 
 <body>
+  <div class="stoptrying">
+    <h2>Stop Trying AntiResponsive :(</h2>
+    <h3>MADE WITH MEDIA QUERIES</h3>
+    <img src="images/stop.svg">
+  </div>
   <!-- NAVBAR -->
   <div class="navbar">
     <div class="col">
@@ -24,12 +31,26 @@
     <div class="col2">
       <a class="main-l justify-space destroy-dec l-color a-main-anim" href="contact.html">.contact();</a>
       <a class="main-l justify-space destroy-dec l-color a-main-anim" href="cv.pdf" download>.curriculum();</a>
-      <a class="main-l justify-space destroy-dec l-color a-main-anim" href="about.html">.about();</a>
+      <a class="main-l justify-space destroy-dec l-color a-main-anim" style="cursor: pointer;" onClick="toabout()">.about();</a>
+    </div>
+    <img src="images/menu.svg" class="menudrop" onclick="dropmenu()">
+    <img src="images/close.svg" class="menuclose" id="close" onclick="closemenu()">
+    <div class="menu" id="menu">
+      <div class="menu-list">
+        <ul>
+          <li>
+            <a href="cv.pdf" download>CURRICULUM</a>
+          </li>
+          <li onclick="tocontact()">
+            CONTACT ME
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
   <!-- END NAVBAR -->
   <!-- NAVE -->
-    <img class="nave" src="images/book.svg">
+    <img class="nave" id="nave" src="images/pay.svg">
   <!-- SCROLLER -->
   <div class="scroller"></div>
   <div class="flyer">
@@ -58,10 +79,10 @@
       <p class="lp-color lp-size">Creative frontend dev.</p>
     </div>
   </div>
-  <div class="clouds">
     <img class="c2" id="cl" src="images/cloud1.png">
     <img class="c1" id="cl2" src="images/cloud2.png">
-  </div>
+    <div class="moon" id="moon"></div>
+    <img class="mar" id="mar" src="images/a.gif">
   <div class="container">
     <div class="mainbox">
       <h2 class="l-color mt-size mainboxh2">.Ssx(<span class="ml-color">about</span>);</h2>
@@ -107,7 +128,7 @@
           class="ml-color">the most important things</span> to be able to fully develop as a coder.</h4>
     </div>
   </div>
-  <div class="containerh">
+  <div class="containerh" id="mainabout">
     <section class="panel black">
       <div class="hbox">
         <h2 class="l-color mt-size">.Ssx(<span class="ml-color">interactive</span>);</h2>
@@ -189,7 +210,6 @@
       <h3 class="l-color" id="shows">Good! > Keep downing...</h3>
     </div>
   </div>
-
   <div class="container" id="containerex" style="display: none;">
     <div class="infobox">
       <h1 class="ml-color mt-size">Skills</h1>
@@ -236,15 +256,25 @@
     <div class="mainbox">
       <h2 class="l-color mt-size">.Ssx(<span class="ml-color">thanks</span>);</h2>
       <h3 class="l-color t-slogan">Thanks for your time.</h3>
-      <p class="lp-color lp-size">If can we work together, you can check my <span class="ml-color">contact media</span>
+      <p class="lp-color lp-size">If we can work together, you can check my <span class="ml-color">contact media</span>
         in the link below...</p>
       <a href="">CONTACT ME</a>
       <p class="lp-color lp-size">And remember, this page is in constant development, check the changes in a few days,
         goodbye.</p>
     </div>
   </div>
+  <div class="navbar">
+    <div class="col">
+      <a class="main-l justify-space destroy-dec ml-color a-main-anim" href="index.html">.ssx();</a>
+    </div>
+    <div class="col2">
+      <a class="main-l justify-space destroy-dec l-color a-main-anim" href="contact.html">.contact();</a>
+      <a class="main-l justify-space destroy-dec l-color a-main-anim" href="cv.pdf" download>.curriculum();</a>
+    </div>
+  </div>
   <script src="js/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>	
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/MotionPathPlugin.min.js"></script>
@@ -290,7 +320,23 @@
     })
   });
 
-  gsap.to(".clouds",{
+  gsap.to(".c1",{
+    duration: 8.5,
+    repeat:-1,
+    x:100,
+    y:26,
+    yoyo:true,
+    ease: "sine.inOut"
+  });
+  gsap.to(".c2",{
+    duration: 8.5,
+    repeat:-1,
+    x:100,
+    y:26,
+    yoyo:true,
+    ease: "sine.inOut"
+  });
+  gsap.to(".moon",{
     duration: 8.5,
     repeat:-1,
     x:100,
@@ -300,15 +346,15 @@
   });
 
   const spath = [
-    {x:-100, y:1},
-    {x:-150, y:0},
-    {x:-200, y:0},
-    {x:-350, y:0},
-    {x:-400, y:0},
-    {x:-350, y:0},
-    {x:-300, y:0},
-    {x:300, y:0},
+    {x:-200, y:1},
+    {x:-450, y:0},
+    {x:-450, y:0},
+    {x:-450, y:5},
+    {x:-450, y:10},
+    {x:-450, y:5},
+    {x:-450, y:0}
   ];
+
 
   const tl = gsap.timeline({
 	scrollTrigger: {
@@ -322,7 +368,7 @@
       path: spath,
       alignOrigin: [0.5, 0.5]
     },
-    duration: 6,
+    duration: 15,
     immediateRender: true,
     ease: "sine.inOut"
   })
@@ -343,7 +389,22 @@
     }
   });
   </script>
-
+  <script>
+    function dropmenu(){
+      document.getElementById('menu').style.marginLeft="0vw";
+      document.getElementById('close').style.marginRight="40px";
+    }
+    function closemenu(){
+      document.getElementById('menu').style.marginLeft="-100vw";
+      document.getElementById('close').style.marginRight="-20px";
+    }
+    function tocontact(){
+      window.open("contact.html");
+    }
+    function toabout(){
+      document.getElementById('mainabout').scrollIntoView();
+    }
+  </script>
 </body>
 
 </html>

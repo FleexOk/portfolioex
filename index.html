@@ -30,7 +30,7 @@
     <div class="col2">
       <a class="main-l justify-space destroy-dec l-color a-main-anim" href="contact.html">.contact();</a>
       <a class="main-l justify-space destroy-dec l-color a-main-anim" href="cv.pdf" download>.curriculum();</a>
-      <a class="main-l justify-space destroy-dec l-color a-main-anim" style="cursor: pointer;" onClick="document.getElementById('mainabout').scrollIntoView();">.about();</a>
+      <a class="main-l justify-space destroy-dec l-color a-main-anim" style="cursor: pointer;" onClick="toabout()">.about();</a>
     </div>
     <img src="images/menu.svg" class="menudrop" onclick="dropmenu()">
     <img src="images/close.svg" class="menuclose" id="close" onclick="closemenu()">
@@ -399,6 +399,9 @@
     }
     function tocontact(){
       window.open("contact.html");
+    }
+    function toabout(){
+      document.getElementById('mainabout').scrollIntoView();
     }
   </script>
 </body>
